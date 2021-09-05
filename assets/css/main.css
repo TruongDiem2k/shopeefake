@@ -448,6 +448,15 @@
     position: relative;
 }
 
+.header__mobile-search-icon{
+    font-size: 2.6rem;
+    color: var(--width-color);
+}
+
+.header__search-checkbox:checked ~ .header__search{
+    display: flex;
+}
+
 .header__logo {
     width: 20rem;
 }
@@ -805,6 +814,51 @@
 .header__search-history-item:hover {
     background-color: #f7f7f7;
 }
+
+.header__sort-bar{
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    border-top: 0.1rem solid #e5e5e5;
+    border-bottom: 0.1rem solid #e5e5e5;
+    display: none;
+}
+
+.header__sort-item{
+    flex: 1;
+    position: relative;
+}
+
+.header__sort-item::before{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    height: 40%;
+    border: 0.1rem solid #e5e5e5;
+    left: 0;
+}
+
+.header__sort-item:first-child::before{
+    border: none;
+}
+
+.header__sort-item--active .header__sort-link{
+    color: var(--primary-color);
+}
+
+.header__sort-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    color: var(--text-color);
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+}
+
 
 /* App Container */
 
