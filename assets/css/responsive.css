@@ -11,6 +11,10 @@
     .header__sort-bar{
         display: flex;
     }
+
+    .mobile-category{
+        display: block;
+    }
 }
 
 /* Tablet */
@@ -37,7 +41,7 @@
     .header__cart-list {
         position: fixed;
         top: var(--header-height);
-        right: -0rem;
+        right: 0rem;
         background-color: var(--white-color);
         width: 100%;
         padding: 0 calc((100% - 64.4rem) / 2);
@@ -57,7 +61,7 @@
         content: "";
         position: absolute;
         top: -2.8rem;
-        right: 9.4rem;
+        right: 8rem;
         border: solid;
         border-width: 1.6rem;
         border-color: transparent transparent var(--white-color) transparent;
@@ -79,12 +83,29 @@
         top: 0;
         z-index: 10;
     }
+
+    .header__mobile-search-icon{
+        display: none;
+    }
+
+    .header__search-select{
+        z-index: 1;
+    }
+
+    .mobile-category{
+        margin-top: -2.8rem;
+    }
 }
 
 /* Mobile */
 @media (max-width: 46.1875em) {
     .hide-on-mobile {
         display: none;
+    }
+
+    .header__mobile-search-icon{
+        color: var(--white-color);
+        display: block;
     }
 
     .header__cart {
@@ -130,5 +151,44 @@
             top: calc(var(--header-height));
             opacity: 1;
         }
+    }
+
+    .pagination-item {
+        margin: 0 0.8rem 1.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .pagination-item__btn {
+        min-width: 3rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+    .home-product{
+        margin: 0 1rem;
+    }
+    
+    .header__cart-list {
+        position: absolute;
+        top: 4.4rem;
+        right: -2rem;
+        background-color: var(--white-color);
+        width: 100vw;
+        border-radius: 0.2rem;
+        box-shadow: 0 0 2px #ccc;
+        display: none;
+        animation: fadein ease-in 0.2s;
+        cursor: default;
+    }
+    .header__cart-item-name {
+        width: 12rem;
+    }
+
+    .header__cart-list::after {
+        right: 4%;
+    }
+
+    .footer{
+        margin: 0 1rem;
     }
 }
