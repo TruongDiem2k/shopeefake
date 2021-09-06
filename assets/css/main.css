@@ -1323,6 +1323,7 @@
 
 .footer__download-qr-img {
     max-width: calc(860% / 23);
+    max-height: calc(860% / 23);
     border: 0.1rem solid #ccc;
 }
 
